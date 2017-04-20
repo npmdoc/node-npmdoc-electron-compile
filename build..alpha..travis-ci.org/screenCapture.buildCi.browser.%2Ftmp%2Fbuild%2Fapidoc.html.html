@@ -1,0 +1,3355 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/paulcbetts/electron-compile">electron-compile (v6.4.0)</a>
+</h1>
+<h4>Electron supporting package to compile JS and CSS in Electron applications</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile">module electron-compile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.CompileCache">
+            function <span class="apidocSignatureSpan">electron-compile.</span>CompileCache
+            <span class="apidocSignatureSpan">(cachePath, fileChangeCache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.CompilerHost">
+            function <span class="apidocSignatureSpan">electron-compile.</span>CompilerHost
+            <span class="apidocSignatureSpan">(optional)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.FileChangedCache">
+            function <span class="apidocSignatureSpan">electron-compile.</span>FileChangedCache
+            <span class="apidocSignatureSpan">(appRoot)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.addBypassChecker">
+            function <span class="apidocSignatureSpan">electron-compile.</span>addBypassChecker
+            <span class="apidocSignatureSpan">(bypassChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.calculateDefaultCompileCacheDirectory">
+            function <span class="apidocSignatureSpan">electron-compile.</span>calculateDefaultCompileCacheDirectory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromBabelRc">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromBabelRc
+            <span class="apidocSignatureSpan">(_x4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromBabelRcSync">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromBabelRcSync
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromConfigFile">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfigFile
+            <span class="apidocSignatureSpan">(_x7)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromConfigFileSync">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfigFileSync
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromConfiguration">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfiguration
+            <span class="apidocSignatureSpan">(info)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromProjectRoot">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromProjectRoot
+            <span class="apidocSignatureSpan">(_x10)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilerHostFromProjectRootSync">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromProjectRootSync
+            <span class="apidocSignatureSpan">(rootDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.createCompilers">
+            function <span class="apidocSignatureSpan">electron-compile.</span>createCompilers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.enableLiveReload">
+            function <span class="apidocSignatureSpan">electron-compile.</span>enableLiveReload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.getDefaultConfiguration">
+            function <span class="apidocSignatureSpan">electron-compile.</span>getDefaultConfiguration
+            <span class="apidocSignatureSpan">(rootDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.init">
+            function <span class="apidocSignatureSpan">electron-compile.</span>init
+            <span class="apidocSignatureSpan">(appRoot, mainModule)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.initializeGlobalHooks">
+            function <span class="apidocSignatureSpan">electron-compile.</span>initializeGlobalHooks
+            <span class="apidocSignatureSpan">(compilerHost)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.watchPath">
+            function <span class="apidocSignatureSpan">electron-compile.</span>watchPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>browser_signal</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>compile_cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>compiler_host</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>config_parser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>digest_for_object</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>file_change_cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>for_all_files</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>initialize_renderer</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>live_reload</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>packager_cli</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>pathwatcher_rx</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>protocol_hook</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>read_only_compiler</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>require_hook</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>rig_mime_types</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electron-compile.</span>sanitize_paths</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.browser_signal">module electron-compile.browser_signal</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.browser_signal.listen">
+            function <span class="apidocSignatureSpan">electron-compile.browser_signal.</span>listen
+            <span class="apidocSignatureSpan">(channel)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.browser_signal.send">
+            function <span class="apidocSignatureSpan">electron-compile.browser_signal.</span>send
+            <span class="apidocSignatureSpan">(channel)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.cli">module electron-compile.cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.cli.main">
+            function <span class="apidocSignatureSpan">electron-compile.cli.</span>main
+            <span class="apidocSignatureSpan">(_x, _x2, _x3, _x4)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.compile_cache">module electron-compile.compile_cache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.compile_cache.default">
+            function <span class="apidocSignatureSpan">electron-compile.compile_cache.</span>default
+            <span class="apidocSignatureSpan">(cachePath, fileChangeCache)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.compiler_host">module electron-compile.compiler_host</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.compiler_host.default">
+            function <span class="apidocSignatureSpan">electron-compile.compiler_host.</span>default
+            <span class="apidocSignatureSpan">(optional)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.config_parser">module electron-compile.config_parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.calculateDefaultCompileCacheDirectory">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>calculateDefaultCompileCacheDirectory
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRc">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromBabelRc
+            <span class="apidocSignatureSpan">(_x4)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRcSync">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromBabelRcSync
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFile">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfigFile
+            <span class="apidocSignatureSpan">(_x7)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFileSync">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfigFileSync
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfiguration">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfiguration
+            <span class="apidocSignatureSpan">(info)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRoot">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromProjectRoot
+            <span class="apidocSignatureSpan">(_x10)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRootSync">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromProjectRootSync
+            <span class="apidocSignatureSpan">(rootDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.createCompilers">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilers
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.getDefaultConfiguration">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>getDefaultConfiguration
+            <span class="apidocSignatureSpan">(rootDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.init">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>init
+            <span class="apidocSignatureSpan">(appRoot, mainModule)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.config_parser.initializeGlobalHooks">
+            function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>initializeGlobalHooks
+            <span class="apidocSignatureSpan">(compilerHost)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.digest_for_object">module electron-compile.digest_for_object</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.digest_for_object.default">
+            function <span class="apidocSignatureSpan">electron-compile.digest_for_object.</span>default
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.file_change_cache">module electron-compile.file_change_cache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.file_change_cache.default">
+            function <span class="apidocSignatureSpan">electron-compile.file_change_cache.</span>default
+            <span class="apidocSignatureSpan">(appRoot)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.for_all_files">module electron-compile.for_all_files</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.for_all_files.forAllFiles">
+            function <span class="apidocSignatureSpan">electron-compile.for_all_files.</span>forAllFiles
+            <span class="apidocSignatureSpan">(rootDirectory, func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.for_all_files.forAllFilesSync">
+            function <span class="apidocSignatureSpan">electron-compile.for_all_files.</span>forAllFilesSync
+            <span class="apidocSignatureSpan">(rootDirectory, func)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.initialize_renderer">module electron-compile.initialize_renderer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.initialize_renderer.initializeRendererProcess">
+            function <span class="apidocSignatureSpan">electron-compile.initialize_renderer.</span>initializeRendererProcess
+            <span class="apidocSignatureSpan">(readOnlyMode)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.live_reload">module electron-compile.live_reload</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.live_reload.enableLiveReload">
+            function <span class="apidocSignatureSpan">electron-compile.live_reload.</span>enableLiveReload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.packager_cli">module electron-compile.packager_cli</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.findExecutableOrGuess">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>findExecutableOrGuess
+            <span class="apidocSignatureSpan">(cmdToFind, argsToUse)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.packageDirToResourcesDir">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>packageDirToResourcesDir
+            <span class="apidocSignatureSpan">(_x)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.packagerMain">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>packagerMain
+            <span class="apidocSignatureSpan">(_x7)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.parsePackagerOutput">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>parsePackagerOutput
+            <span class="apidocSignatureSpan">(output)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.runAsarArchive">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>runAsarArchive
+            <span class="apidocSignatureSpan">(_x5, _x6)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.packager_cli.splitOutAsarArguments">
+            function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>splitOutAsarArguments
+            <span class="apidocSignatureSpan">(argv)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.pathwatcher_rx">module electron-compile.pathwatcher_rx</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.pathwatcher_rx.watchPath">
+            function <span class="apidocSignatureSpan">electron-compile.pathwatcher_rx.</span>watchPath
+            <span class="apidocSignatureSpan">(directory)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.pathwatcher_rx.watchPathDirect">
+            function <span class="apidocSignatureSpan">electron-compile.pathwatcher_rx.</span>watchPathDirect
+            <span class="apidocSignatureSpan">(directory)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.protocol_hook">module electron-compile.protocol_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.protocol_hook.addBypassChecker">
+            function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>addBypassChecker
+            <span class="apidocSignatureSpan">(bypassChecker)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.protocol_hook.initializeProtocolHook">
+            function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>initializeProtocolHook
+            <span class="apidocSignatureSpan">(compilerHost)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.protocol_hook.rigHtmlDocumentToInitializeElectronCompile">
+            function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>rigHtmlDocumentToInitializeElectronCompile
+            <span class="apidocSignatureSpan">(doc)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.read_only_compiler">module electron-compile.read_only_compiler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.read_only_compiler.default">
+            function <span class="apidocSignatureSpan">electron-compile.read_only_compiler.</span>default
+            <span class="apidocSignatureSpan">(name, compilerVersion, compilerOptions, inputMimeTypes)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.require_hook">module electron-compile.require_hook</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.require_hook.default">
+            function <span class="apidocSignatureSpan">electron-compile.require_hook.</span>default
+            <span class="apidocSignatureSpan">(compilerHost)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.rig_mime_types">module electron-compile.rig_mime_types</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.rig_mime_types.init">
+            function <span class="apidocSignatureSpan">electron-compile.rig_mime_types.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electron-compile.sanitize_paths">module electron-compile.sanitize_paths</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electron-compile.sanitize_paths.default">
+            function <span class="apidocSignatureSpan">electron-compile.sanitize_paths.</span>default
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile" id="apidoc.module.electron-compile">module electron-compile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.CompileCache" id="apidoc.element.electron-compile.CompileCache">
+        function <span class="apidocSignatureSpan">electron-compile.</span>CompileCache
+        <span class="apidocSignatureSpan">(cachePath, fileChangeCache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CompileCache {
+<span class="apidocCodeCommentSpan">  /**
+   * Creates an instance, usually used for testing only.
+   *
+   * @param  {string} cachePath  The root directory to use as a cache path
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   * @param {string} sourceMapPath The directory to store sourcemap separately if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   */
+</span>  constructor(cachePath, fileChangeCache) {
+    let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+    this.cachePath = cachePath;
+    this.fileChangeCache = fileChangeCache;
+    this.sourceMapPath = sourceMapPath || this.cachePath;
+  }
+
+  /**
+   * Creates a CompileCache from a class compatible with the CompilerBase
+   * interface. This method uses the compiler name / version / options to
+   * generate a unique directory name for cached results
+   *
+   * @param  {string} cachePath  The root path to use for the cache, a directory
+   *                             representing the hash of the compiler parameters
+   *                             will be created here.
+   *
+   * @param  {CompilerBase} compiler  The compiler to use for version / option
+   *                                  information.
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   *
+   * @param  {boolean} readOnlyMode  Don't attempt to create the cache directory.
+   *
+   * @param {string} sourceMapPath The directory to store sourcemap separately if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   *
+   * @return {CompileCache}  A configured CompileCache instance.
+   */
+  static createFromCompiler(cachePath, compiler, fileChangeCache) {
+    let readOnlyMode = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : false;
+    let sourceMapPath = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+
+    let newCachePath = null;
+    let getCachePath = () =&gt; {
+      if (newCachePath) return newCachePath;
+
+      const digestObj = {
+        name: compiler.name || Object.getPrototypeOf(compiler).constructor.name,
+        version: compiler.getCompilerVersion(),
+        options: compiler.compilerOptions
+      };
+
+      newCachePath = _path2.default.join(cachePath, (0, _digestForObject2.default)(digestObj));
+
+      d(`Path for ${digestObj.name}: ${newCachePath}`);
+      d(`Set up with parameters: ${JSON.stringify(digestObj)}`);
+
+      if (!readOnlyMode) _mkdirp2.default.sync(newCachePath);
+      return newCachePath;
+    };
+
+    let ret = new CompileCache('', fileChangeCache);
+    ret.getCachePath = getCachePath;
+
+    const newSourceMapPath = sourceMapPath;
+    ret.getSourceMapPath = () =&gt; newSourceMapPath || getCachePath();
+
+    return ret;
+  }
+
+  /**
+   * Returns a file's compiled contents from the cache.
+   *
+   * @param  {string} filePath  The path to the file. FileChangedCache will look
+   *                            up the hash and use that as the key in the cache.
+   *
+   * @return {Promise&lt;Object&gt;}  An object with all kinds of information
+   *
+   * @property {Object} hashInfo  The hash information returned from getHashForPath
+   * @property {string} code  The source code if the file was a text file
+   * @property {Buffer} binaryData  The file if it was a binary file
+   * @property {string} mimeType  The MIME type saved in the cache.
+   * @property {string[]} dependentFiles  The dependent files returned from
+   *                                      compiling the file, if any.
+   */
+  get(filePath) {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      d(`Fetching ${filePath} from cache`);
+      let hashInfo = yield _this.fileChangeCache.getHashForPath(_path2.default.resolve(filePath));
+
+      let code = null;
+      let mimeType = null;
+      let binaryData = null;
+      let dependentFiles = null; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.CompilerHost" id="apidoc.element.electron-compile.CompilerHost">
+        function <span class="apidocSignatureSpan">electron-compile.</span>CompilerHost
+        <span class="apidocSignatureSpan">(optional)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CompilerHost {
+<span class="apidocCodeCommentSpan">  /**
+   * Creates an instance of CompilerHost. You probably want to use the methods
+   * in config-parser for development, or {@link createReadonlyFromConfiguration}
+   * for production instead.
+   *
+   * @param  {string} rootCacheDir  The root directory to use for the cache
+   *
+   * @param  {Object} compilers  an Object whose keys are input MIME types and
+   *                             whose values are instances of CompilerBase. Create
+   *                             this via the {@link createCompilers} method in
+   *                             config-parser.
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   *
+   * @param  {boolean} readOnlyMode  If True, cache misses will fail and
+   *                                 compilation will not be attempted.
+   *
+   * @param  {CompilerBase} fallbackCompiler (optional)  When a file is compiled
+   *                                         which doesn't have a matching compiler,
+   *                                         this compiler will be used instead. If
+   *                                         null, will fail compilation. A good
+   *                                         alternate fallback is the compiler for
+   *                                         'text/plain', which is guaranteed to be
+   *                                         present.
+   *
+   * @param {string} sourceMapPath (optional) The directory to store sourcemap separately
+   *                               if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   */
+</span>  constructor(rootCacheDir, compilers, fileChangeCache, readOnlyMode) {
+    let fallbackCompiler = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+    let sourceMapPath = arguments.length &gt; 5 &amp;&amp; arguments[5] !== undefined ? arguments[5] : null;
+
+    let compilersByMimeType = Object.assign({}, compilers);
+    Object.assign(this, { rootCacheDir, compilersByMimeType, fileChangeCache, readOnlyMode, fallbackCompiler });
+    this.appRoot = this.fileChangeCache.appRoot;
+
+    this.cachesForCompilers = Object.keys(compilersByMimeType).reduce((acc, x) =&gt; {
+      let compiler = compilersByMimeType[x];
+      if (acc.has(compiler)) return acc;
+
+      acc.set(compiler, _compileCache2.default.createFromCompiler(rootCacheDir, compiler, fileChangeCache, readOnlyMode, sourceMapPath
+));
+      return acc;
+    }, new Map());
+  }
+
+  /**
+   * Creates a production-mode CompilerHost from the previously saved
+   * configuration
+   *
+   * @param  {string} rootCacheDir  The root directory to use for the cache. This
+   *                                cache must have cache information saved via
+   *                                {@link saveConfiguration}
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {CompilerBase} fallbackCompiler (optional)  When a file is compiled
+   *                                         which doesn't have a matching compiler,
+   *                                         this compiler will be used instead. If
+   *                                         null, will fail compilation. A good
+   *                                         alternate fallback is the compiler for
+   *                                         'text/plain', which is guaranteed to be
+   *                                         present.
+   *
+   * @return {Promise&lt;CompilerHost&gt;}  A read-only CompilerHost
+   */
+  static createReadonlyFromConfiguration(rootCacheDir, appRoot) {
+    let fallbackCompiler = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+    return _asyncToGenerator(function* () {
+      let target = _path2.default.join(rootCacheDir, 'compiler-info.json.gz');
+      let buf = yield _promise.pfs.readFile(target);
+      let info = JSON.parse((yield _promi ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.FileChangedCache" id="apidoc.element.electron-compile.FileChangedCache">
+        function <span class="apidocSignatureSpan">electron-compile.</span>FileChangedCache
+        <span class="apidocSignatureSpan">(appRoot)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class FileChangedCache {
+  constructor(appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : false;
+
+    this.appRoot = (0, _sanitizePaths2.default)(appRoot);
+
+    this.failOnCacheMiss = failOnCacheMiss;
+    this.changeCache = {};
+  }
+
+  static removePrefix(needle, haystack) {
+    let idx = haystack.toLowerCase().indexOf(needle.toLowerCase());
+    if (idx &lt; 0) return haystack;
+
+    return haystack.substring(idx + needle.length);
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * Allows you to create a FileChangedCache from serialized data saved from
+   * {@link getSavedData}.
+   *
+   * @param  {Object} data  Saved data from getSavedData.
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {boolean} failOnCacheMiss (optional)  If True, cache misses will throw.
+   *
+   * @return {FileChangedCache}
+   */
+</span>  static loadFromData(data, appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : true;
+
+    let ret = new FileChangedCache(appRoot, failOnCacheMiss);
+    ret.changeCache = data.changeCache;
+    ret.originalAppRoot = data.appRoot;
+
+    return ret;
+  }
+
+  /**
+   * Allows you to create a FileChangedCache from serialized data saved from
+   * {@link save}.
+   *
+   * @param  {string} file  Saved data from save.
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {boolean} failOnCacheMiss (optional)  If True, cache misses will throw.
+   *
+   * @return {Promise&lt;FileChangedCache&gt;}
+   */
+  static loadFromFile(file, appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : true;
+    return _asyncToGenerator(function* () {
+      d(`Loading canned FileChangedCache from ${file}`);
+
+      let buf = yield _promise.pfs.readFile(file);
+      return FileChangedCache.loadFromData(JSON.parse((yield _promise.pzlib.gunzip(buf))), appRoot, failOnCacheMiss);
+    })();
+  }
+
+  /**
+   * Returns information about a given file, including its hash. This method is
+   * the main method for this cache.
+   *
+   * @param  {string} absoluteFilePath  The path to a file to retrieve info on.
+   *
+   * @return {Promise&lt;Object&gt;}
+   *
+   * @property {string} hash  The SHA1 hash of the file
+   * @property {boolean} isMinified  True if the file is minified
+   * @property {boolean} isInNodeModules  True if the file is in a library directory
+   * @property {boolean} hasSourceMap  True if the file has a source map
+   * @property {boolean} isFileBinary  True if the file is not a text file
+   * @property {Buffer} binaryData (optional)  The buffer that was read if the file
+   *                                           was binary and there was a cache miss.
+   * @property {string} code (optional)  The string that was read if the file
+   *                                     was text and there was a cache miss
+   */
+  getHashForPath(absoluteFilePath) {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      var _getCacheEntryForPath = _this.getCacheEntryForPath(absoluteFilePath);
+
+      let cacheEntry = _getCacheEntryForPath.cacheEntry,
+          cacheKey = _getCacheEntryForPath.cacheKey;
+
+
+      if (_this.failOnCacheMiss) {
+        return cacheEntry.info;
+      }
+
+      var _ref = yield _this.getInfoForCacheEntry(absoluteFilePath);
+
+      let ctime = _ref.ctime,
+          size = _ref.size;
+
+
+      if (cacheEntry) {
+        let fileHasChanged = yield _this.hasFileChanged(absoluteFilePath, cacheEntry, { ctime, size });
+
+        if (!fileHasChanged) {
+          return cacheEntry.info;
+        }
+
+        d(`Invalidating cache entry: ${cacheEntry.ctime} === ${ctime} &amp;&amp; ${cacheEntry.size} === ${size}`);
+        delete _this.changeCache.cacheEntry;
+      }
+
+      var _ref2 = yield _this.calculateHashForFile(absoluteFilePath);
+
+      let digest = _ref2.digest,
+          sourceCode = _ref2.sourceCode,
+          bi ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.addBypassChecker" id="apidoc.element.electron-compile.addBypassChecker">
+        function <span class="apidocSignatureSpan">electron-compile.</span>addBypassChecker
+        <span class="apidocSignatureSpan">(bypassChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addBypassChecker(bypassChecker) {
+  bypassCheckers.push(bypassChecker);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.calculateDefaultCompileCacheDirectory" id="apidoc.element.electron-compile.calculateDefaultCompileCacheDirectory">
+        function <span class="apidocSignatureSpan">electron-compile.</span>calculateDefaultCompileCacheDirectory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function calculateDefaultCompileCacheDirectory() {
+  let tmpDir = process.env.TEMP || process.env.TMPDIR || '/tmp';
+  let hash = require('crypto').createHash('md5').update(process.execPath).digest('hex');
+
+  let cacheDir = _path2.default.join(tmpDir, `compileCache_${hash}`);
+  _mkdirp2.default.sync(cacheDir);
+
+  d(`Using default cache directory: ${cacheDir}`);
+  return cacheDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromBabelRc" id="apidoc.element.electron-compile.createCompilerHostFromBabelRc">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromBabelRc
+        <span class="apidocSignatureSpan">(_x4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromBabelRc(_x4) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromBabelRcSync" id="apidoc.element.electron-compile.createCompilerHostFromBabelRcSync">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromBabelRcSync
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromBabelRcSync(file) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let info = JSON.parse(_fs2.default.readFileSync(file, 'utf8'));
+
+  // package.json
+  if ('babel' in info) {
+    info = info.babel;
+  }
+
+  if ('env' in info) {
+    let ourEnv = process.env.BABEL_ENV || process.env.NODE_ENV || 'development';
+    info = info.env[ourEnv];
+  }
+
+  // Are we still package.json (i.e. is there no babel info whatsoever?)
+  if ('name' in info &amp;&amp; 'version' in info) {
+    let appRoot = _path2.default.dirname(file);
+    return createCompilerHostFromConfiguration({
+      appRoot: appRoot,
+      options: getDefaultConfiguration(appRoot),
+      rootCacheDir,
+      sourceMapPath
+    });
+  }
+
+  return createCompilerHostFromConfiguration({
+    appRoot: _path2.default.dirname(file),
+    options: {
+      'application/javascript': info
+    },
+    rootCacheDir,
+    sourceMapPath
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromConfigFile" id="apidoc.element.electron-compile.createCompilerHostFromConfigFile">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfigFile
+        <span class="apidocSignatureSpan">(_x7)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfigFile(_x7) {
+  return _ref2.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromConfigFileSync" id="apidoc.element.electron-compile.createCompilerHostFromConfigFileSync">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfigFileSync
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfigFileSync(file) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let info = JSON.parse(_fs2.default.readFileSync(file, 'utf8'));
+
+  if ('env' in info) {
+    let ourEnv = process.env.ELECTRON_COMPILE_ENV || process.env.NODE_ENV || 'development';
+    info = info.env[ourEnv];
+  }
+
+  return createCompilerHostFromConfiguration({
+    appRoot: _path2.default.dirname(file),
+    options: info,
+    rootCacheDir,
+    sourceMapPath
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromConfiguration" id="apidoc.element.electron-compile.createCompilerHostFromConfiguration">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromConfiguration
+        <span class="apidocSignatureSpan">(info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfiguration(info) {
+  let compilers = createCompilers();
+  let rootCacheDir = info.rootCacheDir || calculateDefaultCompileCacheDirectory();
+  const sourceMapPath = info.sourceMapPath || info.rootCacheDir;
+
+  if (info.sourceMapPath) {
+    createSourceMapDirectory(sourceMapPath);
+  }
+
+  d(`Creating CompilerHost: ${JSON.stringify(info)}, rootCacheDir = ${rootCacheDir}, sourceMapPath = ${sourceMapPath}`);
+  let fileChangeCache = new _fileChangeCache2.default(info.appRoot);
+
+  let compilerInfo = _path2.default.join(rootCacheDir, 'compiler-info.json.gz');
+  if (_fs2.default.existsSync(compilerInfo)) {
+    let buf = _fs2.default.readFileSync(compilerInfo);
+    let json = JSON.parse(_zlib2.default.gunzipSync(buf));
+    fileChangeCache = _fileChangeCache2.default.loadFromData(json.fileChangeCache, info.appRoot, false);
+  }
+
+  Object.keys(info.options || {}).forEach(x =&gt; {
+    let opts = info.options[x];
+    if (!(x in compilers)) {
+      throw new Error(`Found compiler settings for missing compiler: ${x}`);
+    }
+
+    // NB: Let's hope this isn't a valid compiler option...
+    if (opts.passthrough) {
+      compilers[x] = compilers['text/plain'];
+      delete opts.passthrough;
+    }
+
+    d(`Setting options for ${x}: ${JSON.stringify(opts)}`);
+    compilers[x].compilerOptions = opts;
+  });
+
+  let ret = new _compilerHost2.default(rootCacheDir, compilers, fileChangeCache, false, compilers['text/plain']);
+
+  // NB: It's super important that we guarantee that the configuration is saved
+  // out, because we'll need to re-read it in the renderer process
+  d(`Created compiler host with options: ${JSON.stringify(info)}`);
+  ret.saveConfigurationSync();
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromProjectRoot" id="apidoc.element.electron-compile.createCompilerHostFromProjectRoot">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromProjectRoot
+        <span class="apidocSignatureSpan">(_x10)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromProjectRoot(_x10) {
+  return _ref3.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilerHostFromProjectRootSync" id="apidoc.element.electron-compile.createCompilerHostFromProjectRootSync">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilerHostFromProjectRootSync
+        <span class="apidocSignatureSpan">(rootDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromProjectRootSync(rootDir) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let compilerc = _path2.default.join(rootDir, '.compilerc');
+  if (statSyncNoException(compilerc)) {
+    d(`Found a .compilerc at ${compilerc}, using it`);
+    return createCompilerHostFromConfigFileSync(compilerc, rootCacheDir, sourceMapPath);
+  }
+
+  let babelrc = _path2.default.join(rootDir, '.babelrc');
+  if (statSyncNoException(babelrc)) {
+    d(`Found a .babelrc at ${babelrc}, using it`);
+    return createCompilerHostFromBabelRcSync(babelrc, rootCacheDir, sourceMapPath);
+  }
+
+  d(`Using package.json or default parameters at ${rootDir}`);
+  return createCompilerHostFromBabelRcSync(_path2.default.join(rootDir, 'package.json'), rootCacheDir, sourceMapPath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.createCompilers" id="apidoc.element.electron-compile.createCompilers">
+        function <span class="apidocSignatureSpan">electron-compile.</span>createCompilers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilers() {
+  if (!allCompilerClasses) {
+    // First we want to see if electron-compilers itself has been installed with
+    // devDependencies. If that's not the case, check to see if
+    // electron-compilers is installed as a peer dependency (probably as a
+    // devDependency of the root project).
+    const locations = ['electron-compilers', '../../electron-compilers'];
+
+    for (let location of locations) {
+      try {
+        allCompilerClasses = require(location);
+      } catch (e) {
+        // Yolo
+      }
+    }
+
+    if (!allCompilerClasses) {
+      throw new Error("Electron compilers not found but were requested to be loaded");
+    }
+  }
+
+  // NB: Note that this code is carefully set up so that InlineHtmlCompiler
+  // (i.e. classes with `createFromCompilers`) initially get an empty object,
+  // but will have a reference to the final result of what we return, which
+  // resolves the circular dependency we'd otherwise have here.
+  let ret = {};
+  let instantiatedClasses = allCompilerClasses.map(Klass =&gt; {
+    if ('createFromCompilers' in Klass) {
+      return Klass.createFromCompilers(ret);
+    } else {
+      return new Klass();
+    }
+  });
+
+  instantiatedClasses.reduce((acc, x) =&gt; {
+    let Klass = Object.getPrototypeOf(x).constructor;
+
+    for (let type of Klass.getInputMimeTypes()) {
+      acc[type] = x;
+    }
+    return acc;
+  }, ret);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.enableLiveReload" id="apidoc.element.electron-compile.enableLiveReload">
+        function <span class="apidocSignatureSpan">electron-compile.</span>enableLiveReload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enableLiveReload = function () {
+  enableLiveReload = enableLiveReload || require('./live-reload').enableLiveReload;
+  return enableLiveReload(...arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.getDefaultConfiguration" id="apidoc.element.electron-compile.getDefaultConfiguration">
+        function <span class="apidocSignatureSpan">electron-compile.</span>getDefaultConfiguration
+        <span class="apidocSignatureSpan">(rootDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDefaultConfiguration(rootDir) {
+  return {
+    'application/javascript': {
+      "presets": [["env", {
+        "targets": {
+          "electron": getElectronVersion(rootDir)
+        }
+      }], "react"],
+      "sourceMaps": "inline"
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.init" id="apidoc.element.electron-compile.init">
+        function <span class="apidocSignatureSpan">electron-compile.</span>init
+        <span class="apidocSignatureSpan">(appRoot, mainModule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(appRoot, mainModule) {
+  let productionMode = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+  let cacheDir = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : null;
+  let sourceMapPath = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+
+  let compilerHost = null;
+  let rootCacheDir = _path2.default.join(appRoot, cacheDir || '.cache');
+
+  if (productionMode === null) {
+    productionMode = !!statSyncNoException(rootCacheDir);
+  }
+
+  if (productionMode) {
+    compilerHost = _compilerHost2.default.createReadonlyFromConfigurationSync(rootCacheDir, appRoot);
+  } else {
+    // if cacheDir was passed in, pass it along. Otherwise, default to a tempdir.
+    const cachePath = cacheDir ? rootCacheDir : null;
+    const mapPath = sourceMapPath ? _path2.default.join(appRoot, sourceMapPath) : cachePath;
+    compilerHost = createCompilerHostFromProjectRootSync(appRoot, cachePath, mapPath);
+  }
+
+  initializeGlobalHooks(compilerHost);
+  require.main.require(mainModule);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create a new file that will be the entry point of your app (perhaps changing 'main' in package.json) - you need to pass
+ in the root directory of your application, which will vary based on your setup. The root directory is the directory that your `
+package.json` is in.
+
+```js
+// Assuming this file is ./src/es6-init.js
+var appRoot = path.join(__dirname, '..');
+
+require('electron-compile').<span class="apidocCodeKeywordSpan">init</span>(appRoot, require.resolve('./main'
+;));
+```
+
+
+### I did it, now what?
+
+From then on, you can now simply include files directly in your HTML, no need for cross-compilation:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.initializeGlobalHooks" id="apidoc.element.electron-compile.initializeGlobalHooks">
+        function <span class="apidocSignatureSpan">electron-compile.</span>initializeGlobalHooks
+        <span class="apidocSignatureSpan">(compilerHost)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initializeGlobalHooks(compilerHost) {
+  let globalVar = global || window;
+  globalVar.globalCompilerHost = compilerHost;
+
+  (0, _requireHook2.default)(compilerHost);
+
+  if ('type' in process &amp;&amp; process.type === 'browser') {
+    var _require = require('electron');
+
+    const app = _require.app;
+
+    var _require2 = require('./protocol-hook');
+
+    const initializeProtocolHook = _require2.initializeProtocolHook;
+
+
+    let protoify = function () {
+      initializeProtocolHook(compilerHost);
+    };
+    if (app.isReady()) {
+      protoify();
+    } else {
+      app.on('ready', protoify);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.watchPath" id="apidoc.element.electron-compile.watchPath">
+        function <span class="apidocSignatureSpan">electron-compile.</span>watchPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">watchPath = function () {
+  watchPath = watchPath || require('./pathwatcher-rx').watchPath;
+  return watchPath(...arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.browser_signal" id="apidoc.module.electron-compile.browser_signal">module electron-compile.browser_signal</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.browser_signal.listen" id="apidoc.element.electron-compile.browser_signal.listen">
+        function <span class="apidocSignatureSpan">electron-compile.browser_signal.</span>listen
+        <span class="apidocSignatureSpan">(channel)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen(channel) {
+  if (isElectron &amp;&amp; !isBrowser) return _Observable.Observable.throw(new Error("Can only call listen from browser"));
+
+  return _Observable.Observable.create(s =&gt; {
+    if (!(channel in channelList)) {
+      let subj = new _Subject.Subject();
+      let ipcListener = function (e) {
+        for (var _len2 = arguments.length, args = Array(_len2 &gt; 1 ? _len2 - 1 : 0), _key2 = 1; _key2 &lt; _len2; _key2++) {
+          args[_key2 - 1] = arguments[_key2];
+        }
+
+        subj.next(args);
+      };
+
+      channelList[channel] = { subj, refcount: 0 };
+      if (isElectron &amp;&amp; isBrowser) {
+        ipc.on(channel, ipcListener);
+        channelList[channel].listener = ipcListener;
+      }
+    }
+
+    channelList[channel].refcount++;
+
+    let disp = channelList[channel].subj.subscribe(s);
+    disp.add(() =&gt; {
+      channelList[channel].refcount--;
+      if (channelList[channel].refcount &gt; 0) return;
+
+      if (channelList[channel].listener) {
+        ipc.removeListener(channel, channelList[channel].listener);
+      }
+
+      delete channelList.channel;
+    });
+
+    return disp;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.browser_signal.send" id="apidoc.element.electron-compile.browser_signal.send">
+        function <span class="apidocSignatureSpan">electron-compile.browser_signal.</span>send
+        <span class="apidocSignatureSpan">(channel)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function send(channel) {
+  for (var _len = arguments.length, args = Array(_len &gt; 1 ? _len - 1 : 0), _key = 1; _key &lt; _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  if (isElectron &amp;&amp; !isBrowser) {
+    ipc.send(channel, ...args);
+    return;
+  }
+
+  if (!(channel in channelList)) return;
+
+  let subj = channelList[channel].subj;
+
+  subj.next(args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+function send(channel) {
+for (var _len = arguments.length, args = Array(_len &gt; 1 ? _len - 1 : 0), _key = 1; _key &lt; _len; _key++) {
+  args[_key - 1] = arguments[_key];
+}
+
+if (isElectron &amp;&amp; !isBrowser) {
+  ipc.<span class="apidocCodeKeywordSpan">send</span>(channel, ...args);
+  return;
+}
+
+if (!(channel in channelList)) return;
+
+let subj = channelList[channel].subj;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.cli" id="apidoc.module.electron-compile.cli">module electron-compile.cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.cli.main" id="apidoc.element.electron-compile.cli.main">
+        function <span class="apidocSignatureSpan">electron-compile.cli.</span>main
+        <span class="apidocSignatureSpan">(_x, _x2, _x3, _x4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function main(_x, _x2, _x3, _x4) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.compile_cache" id="apidoc.module.electron-compile.compile_cache">module electron-compile.compile_cache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.compile_cache.default" id="apidoc.element.electron-compile.compile_cache.default">
+        function <span class="apidocSignatureSpan">electron-compile.compile_cache.</span>default
+        <span class="apidocSignatureSpan">(cachePath, fileChangeCache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CompileCache {
+<span class="apidocCodeCommentSpan">  /**
+   * Creates an instance, usually used for testing only.
+   *
+   * @param  {string} cachePath  The root directory to use as a cache path
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   * @param {string} sourceMapPath The directory to store sourcemap separately if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   */
+</span>  constructor(cachePath, fileChangeCache) {
+    let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+    this.cachePath = cachePath;
+    this.fileChangeCache = fileChangeCache;
+    this.sourceMapPath = sourceMapPath || this.cachePath;
+  }
+
+  /**
+   * Creates a CompileCache from a class compatible with the CompilerBase
+   * interface. This method uses the compiler name / version / options to
+   * generate a unique directory name for cached results
+   *
+   * @param  {string} cachePath  The root path to use for the cache, a directory
+   *                             representing the hash of the compiler parameters
+   *                             will be created here.
+   *
+   * @param  {CompilerBase} compiler  The compiler to use for version / option
+   *                                  information.
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   *
+   * @param  {boolean} readOnlyMode  Don't attempt to create the cache directory.
+   *
+   * @param {string} sourceMapPath The directory to store sourcemap separately if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   *
+   * @return {CompileCache}  A configured CompileCache instance.
+   */
+  static createFromCompiler(cachePath, compiler, fileChangeCache) {
+    let readOnlyMode = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : false;
+    let sourceMapPath = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+
+    let newCachePath = null;
+    let getCachePath = () =&gt; {
+      if (newCachePath) return newCachePath;
+
+      const digestObj = {
+        name: compiler.name || Object.getPrototypeOf(compiler).constructor.name,
+        version: compiler.getCompilerVersion(),
+        options: compiler.compilerOptions
+      };
+
+      newCachePath = _path2.default.join(cachePath, (0, _digestForObject2.default)(digestObj));
+
+      d(`Path for ${digestObj.name}: ${newCachePath}`);
+      d(`Set up with parameters: ${JSON.stringify(digestObj)}`);
+
+      if (!readOnlyMode) _mkdirp2.default.sync(newCachePath);
+      return newCachePath;
+    };
+
+    let ret = new CompileCache('', fileChangeCache);
+    ret.getCachePath = getCachePath;
+
+    const newSourceMapPath = sourceMapPath;
+    ret.getSourceMapPath = () =&gt; newSourceMapPath || getCachePath();
+
+    return ret;
+  }
+
+  /**
+   * Returns a file's compiled contents from the cache.
+   *
+   * @param  {string} filePath  The path to the file. FileChangedCache will look
+   *                            up the hash and use that as the key in the cache.
+   *
+   * @return {Promise&lt;Object&gt;}  An object with all kinds of information
+   *
+   * @property {Object} hashInfo  The hash information returned from getHashForPath
+   * @property {string} code  The source code if the file was a text file
+   * @property {Buffer} binaryData  The file if it was a binary file
+   * @property {string} mimeType  The MIME type saved in the cache.
+   * @property {string[]} dependentFiles  The dependent files returned from
+   *                                      compiling the file, if any.
+   */
+  get(filePath) {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      d(`Fetching ${filePath} from cache`);
+      let hashInfo = yield _this.fileChangeCache.getHashForPath(_path2.default.resolve(filePath));
+
+      let code = null;
+      let mimeType = null;
+      let binaryData = null;
+      let dependentFiles = null; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.compiler_host" id="apidoc.module.electron-compile.compiler_host">module electron-compile.compiler_host</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.compiler_host.default" id="apidoc.element.electron-compile.compiler_host.default">
+        function <span class="apidocSignatureSpan">electron-compile.compiler_host.</span>default
+        <span class="apidocSignatureSpan">(optional)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class CompilerHost {
+<span class="apidocCodeCommentSpan">  /**
+   * Creates an instance of CompilerHost. You probably want to use the methods
+   * in config-parser for development, or {@link createReadonlyFromConfiguration}
+   * for production instead.
+   *
+   * @param  {string} rootCacheDir  The root directory to use for the cache
+   *
+   * @param  {Object} compilers  an Object whose keys are input MIME types and
+   *                             whose values are instances of CompilerBase. Create
+   *                             this via the {@link createCompilers} method in
+   *                             config-parser.
+   *
+   * @param  {FileChangedCache} fileChangeCache  A file-change cache that is
+   *                                             optionally pre-loaded.
+   *
+   * @param  {boolean} readOnlyMode  If True, cache misses will fail and
+   *                                 compilation will not be attempted.
+   *
+   * @param  {CompilerBase} fallbackCompiler (optional)  When a file is compiled
+   *                                         which doesn't have a matching compiler,
+   *                                         this compiler will be used instead. If
+   *                                         null, will fail compilation. A good
+   *                                         alternate fallback is the compiler for
+   *                                         'text/plain', which is guaranteed to be
+   *                                         present.
+   *
+   * @param {string} sourceMapPath (optional) The directory to store sourcemap separately
+   *                               if compiler option enabled to emit.
+   *                               Default to cachePath if not specified.
+   */
+</span>  constructor(rootCacheDir, compilers, fileChangeCache, readOnlyMode) {
+    let fallbackCompiler = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+    let sourceMapPath = arguments.length &gt; 5 &amp;&amp; arguments[5] !== undefined ? arguments[5] : null;
+
+    let compilersByMimeType = Object.assign({}, compilers);
+    Object.assign(this, { rootCacheDir, compilersByMimeType, fileChangeCache, readOnlyMode, fallbackCompiler });
+    this.appRoot = this.fileChangeCache.appRoot;
+
+    this.cachesForCompilers = Object.keys(compilersByMimeType).reduce((acc, x) =&gt; {
+      let compiler = compilersByMimeType[x];
+      if (acc.has(compiler)) return acc;
+
+      acc.set(compiler, _compileCache2.default.createFromCompiler(rootCacheDir, compiler, fileChangeCache, readOnlyMode, sourceMapPath
+));
+      return acc;
+    }, new Map());
+  }
+
+  /**
+   * Creates a production-mode CompilerHost from the previously saved
+   * configuration
+   *
+   * @param  {string} rootCacheDir  The root directory to use for the cache. This
+   *                                cache must have cache information saved via
+   *                                {@link saveConfiguration}
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {CompilerBase} fallbackCompiler (optional)  When a file is compiled
+   *                                         which doesn't have a matching compiler,
+   *                                         this compiler will be used instead. If
+   *                                         null, will fail compilation. A good
+   *                                         alternate fallback is the compiler for
+   *                                         'text/plain', which is guaranteed to be
+   *                                         present.
+   *
+   * @return {Promise&lt;CompilerHost&gt;}  A read-only CompilerHost
+   */
+  static createReadonlyFromConfiguration(rootCacheDir, appRoot) {
+    let fallbackCompiler = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+    return _asyncToGenerator(function* () {
+      let target = _path2.default.join(rootCacheDir, 'compiler-info.json.gz');
+      let buf = yield _promise.pfs.readFile(target);
+      let info = JSON.parse((yield _promi ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.config_parser" id="apidoc.module.electron-compile.config_parser">module electron-compile.config_parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.calculateDefaultCompileCacheDirectory" id="apidoc.element.electron-compile.config_parser.calculateDefaultCompileCacheDirectory">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>calculateDefaultCompileCacheDirectory
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function calculateDefaultCompileCacheDirectory() {
+  let tmpDir = process.env.TEMP || process.env.TMPDIR || '/tmp';
+  let hash = require('crypto').createHash('md5').update(process.execPath).digest('hex');
+
+  let cacheDir = _path2.default.join(tmpDir, `compileCache_${hash}`);
+  _mkdirp2.default.sync(cacheDir);
+
+  d(`Using default cache directory: ${cacheDir}`);
+  return cacheDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRc" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRc">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromBabelRc
+        <span class="apidocSignatureSpan">(_x4)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromBabelRc(_x4) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRcSync" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromBabelRcSync">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromBabelRcSync
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromBabelRcSync(file) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let info = JSON.parse(_fs2.default.readFileSync(file, 'utf8'));
+
+  // package.json
+  if ('babel' in info) {
+    info = info.babel;
+  }
+
+  if ('env' in info) {
+    let ourEnv = process.env.BABEL_ENV || process.env.NODE_ENV || 'development';
+    info = info.env[ourEnv];
+  }
+
+  // Are we still package.json (i.e. is there no babel info whatsoever?)
+  if ('name' in info &amp;&amp; 'version' in info) {
+    let appRoot = _path2.default.dirname(file);
+    return createCompilerHostFromConfiguration({
+      appRoot: appRoot,
+      options: getDefaultConfiguration(appRoot),
+      rootCacheDir,
+      sourceMapPath
+    });
+  }
+
+  return createCompilerHostFromConfiguration({
+    appRoot: _path2.default.dirname(file),
+    options: {
+      'application/javascript': info
+    },
+    rootCacheDir,
+    sourceMapPath
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFile" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFile">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfigFile
+        <span class="apidocSignatureSpan">(_x7)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfigFile(_x7) {
+  return _ref2.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFileSync" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromConfigFileSync">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfigFileSync
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfigFileSync(file) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let info = JSON.parse(_fs2.default.readFileSync(file, 'utf8'));
+
+  if ('env' in info) {
+    let ourEnv = process.env.ELECTRON_COMPILE_ENV || process.env.NODE_ENV || 'development';
+    info = info.env[ourEnv];
+  }
+
+  return createCompilerHostFromConfiguration({
+    appRoot: _path2.default.dirname(file),
+    options: info,
+    rootCacheDir,
+    sourceMapPath
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromConfiguration" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromConfiguration">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromConfiguration
+        <span class="apidocSignatureSpan">(info)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromConfiguration(info) {
+  let compilers = createCompilers();
+  let rootCacheDir = info.rootCacheDir || calculateDefaultCompileCacheDirectory();
+  const sourceMapPath = info.sourceMapPath || info.rootCacheDir;
+
+  if (info.sourceMapPath) {
+    createSourceMapDirectory(sourceMapPath);
+  }
+
+  d(`Creating CompilerHost: ${JSON.stringify(info)}, rootCacheDir = ${rootCacheDir}, sourceMapPath = ${sourceMapPath}`);
+  let fileChangeCache = new _fileChangeCache2.default(info.appRoot);
+
+  let compilerInfo = _path2.default.join(rootCacheDir, 'compiler-info.json.gz');
+  if (_fs2.default.existsSync(compilerInfo)) {
+    let buf = _fs2.default.readFileSync(compilerInfo);
+    let json = JSON.parse(_zlib2.default.gunzipSync(buf));
+    fileChangeCache = _fileChangeCache2.default.loadFromData(json.fileChangeCache, info.appRoot, false);
+  }
+
+  Object.keys(info.options || {}).forEach(x =&gt; {
+    let opts = info.options[x];
+    if (!(x in compilers)) {
+      throw new Error(`Found compiler settings for missing compiler: ${x}`);
+    }
+
+    // NB: Let's hope this isn't a valid compiler option...
+    if (opts.passthrough) {
+      compilers[x] = compilers['text/plain'];
+      delete opts.passthrough;
+    }
+
+    d(`Setting options for ${x}: ${JSON.stringify(opts)}`);
+    compilers[x].compilerOptions = opts;
+  });
+
+  let ret = new _compilerHost2.default(rootCacheDir, compilers, fileChangeCache, false, compilers['text/plain']);
+
+  // NB: It's super important that we guarantee that the configuration is saved
+  // out, because we'll need to re-read it in the renderer process
+  d(`Created compiler host with options: ${JSON.stringify(info)}`);
+  ret.saveConfigurationSync();
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRoot" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRoot">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromProjectRoot
+        <span class="apidocSignatureSpan">(_x10)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromProjectRoot(_x10) {
+  return _ref3.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRootSync" id="apidoc.element.electron-compile.config_parser.createCompilerHostFromProjectRootSync">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilerHostFromProjectRootSync
+        <span class="apidocSignatureSpan">(rootDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilerHostFromProjectRootSync(rootDir) {
+  let rootCacheDir = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : null;
+  let sourceMapPath = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+
+  let compilerc = _path2.default.join(rootDir, '.compilerc');
+  if (statSyncNoException(compilerc)) {
+    d(`Found a .compilerc at ${compilerc}, using it`);
+    return createCompilerHostFromConfigFileSync(compilerc, rootCacheDir, sourceMapPath);
+  }
+
+  let babelrc = _path2.default.join(rootDir, '.babelrc');
+  if (statSyncNoException(babelrc)) {
+    d(`Found a .babelrc at ${babelrc}, using it`);
+    return createCompilerHostFromBabelRcSync(babelrc, rootCacheDir, sourceMapPath);
+  }
+
+  d(`Using package.json or default parameters at ${rootDir}`);
+  return createCompilerHostFromBabelRcSync(_path2.default.join(rootDir, 'package.json'), rootCacheDir, sourceMapPath);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.createCompilers" id="apidoc.element.electron-compile.config_parser.createCompilers">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>createCompilers
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createCompilers() {
+  if (!allCompilerClasses) {
+    // First we want to see if electron-compilers itself has been installed with
+    // devDependencies. If that's not the case, check to see if
+    // electron-compilers is installed as a peer dependency (probably as a
+    // devDependency of the root project).
+    const locations = ['electron-compilers', '../../electron-compilers'];
+
+    for (let location of locations) {
+      try {
+        allCompilerClasses = require(location);
+      } catch (e) {
+        // Yolo
+      }
+    }
+
+    if (!allCompilerClasses) {
+      throw new Error("Electron compilers not found but were requested to be loaded");
+    }
+  }
+
+  // NB: Note that this code is carefully set up so that InlineHtmlCompiler
+  // (i.e. classes with `createFromCompilers`) initially get an empty object,
+  // but will have a reference to the final result of what we return, which
+  // resolves the circular dependency we'd otherwise have here.
+  let ret = {};
+  let instantiatedClasses = allCompilerClasses.map(Klass =&gt; {
+    if ('createFromCompilers' in Klass) {
+      return Klass.createFromCompilers(ret);
+    } else {
+      return new Klass();
+    }
+  });
+
+  instantiatedClasses.reduce((acc, x) =&gt; {
+    let Klass = Object.getPrototypeOf(x).constructor;
+
+    for (let type of Klass.getInputMimeTypes()) {
+      acc[type] = x;
+    }
+    return acc;
+  }, ret);
+
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.getDefaultConfiguration" id="apidoc.element.electron-compile.config_parser.getDefaultConfiguration">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>getDefaultConfiguration
+        <span class="apidocSignatureSpan">(rootDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDefaultConfiguration(rootDir) {
+  return {
+    'application/javascript': {
+      "presets": [["env", {
+        "targets": {
+          "electron": getElectronVersion(rootDir)
+        }
+      }], "react"],
+      "sourceMaps": "inline"
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.init" id="apidoc.element.electron-compile.config_parser.init">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>init
+        <span class="apidocSignatureSpan">(appRoot, mainModule)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init(appRoot, mainModule) {
+  let productionMode = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : null;
+  let cacheDir = arguments.length &gt; 3 &amp;&amp; arguments[3] !== undefined ? arguments[3] : null;
+  let sourceMapPath = arguments.length &gt; 4 &amp;&amp; arguments[4] !== undefined ? arguments[4] : null;
+
+  let compilerHost = null;
+  let rootCacheDir = _path2.default.join(appRoot, cacheDir || '.cache');
+
+  if (productionMode === null) {
+    productionMode = !!statSyncNoException(rootCacheDir);
+  }
+
+  if (productionMode) {
+    compilerHost = _compilerHost2.default.createReadonlyFromConfigurationSync(rootCacheDir, appRoot);
+  } else {
+    // if cacheDir was passed in, pass it along. Otherwise, default to a tempdir.
+    const cachePath = cacheDir ? rootCacheDir : null;
+    const mapPath = sourceMapPath ? _path2.default.join(appRoot, sourceMapPath) : cachePath;
+    compilerHost = createCompilerHostFromProjectRootSync(appRoot, cachePath, mapPath);
+  }
+
+  initializeGlobalHooks(compilerHost);
+  require.main.require(mainModule);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create a new file that will be the entry point of your app (perhaps changing 'main' in package.json) - you need to pass
+ in the root directory of your application, which will vary based on your setup. The root directory is the directory that your `
+package.json` is in.
+
+```js
+// Assuming this file is ./src/es6-init.js
+var appRoot = path.join(__dirname, '..');
+
+require('electron-compile').<span class="apidocCodeKeywordSpan">init</span>(appRoot, require.resolve('./main'
+;));
+```
+
+
+### I did it, now what?
+
+From then on, you can now simply include files directly in your HTML, no need for cross-compilation:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.config_parser.initializeGlobalHooks" id="apidoc.element.electron-compile.config_parser.initializeGlobalHooks">
+        function <span class="apidocSignatureSpan">electron-compile.config_parser.</span>initializeGlobalHooks
+        <span class="apidocSignatureSpan">(compilerHost)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initializeGlobalHooks(compilerHost) {
+  let globalVar = global || window;
+  globalVar.globalCompilerHost = compilerHost;
+
+  (0, _requireHook2.default)(compilerHost);
+
+  if ('type' in process &amp;&amp; process.type === 'browser') {
+    var _require = require('electron');
+
+    const app = _require.app;
+
+    var _require2 = require('./protocol-hook');
+
+    const initializeProtocolHook = _require2.initializeProtocolHook;
+
+
+    let protoify = function () {
+      initializeProtocolHook(compilerHost);
+    };
+    if (app.isReady()) {
+      protoify();
+    } else {
+      app.on('ready', protoify);
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.digest_for_object" id="apidoc.module.electron-compile.digest_for_object">module electron-compile.digest_for_object</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.digest_for_object.default" id="apidoc.element.electron-compile.digest_for_object.default">
+        function <span class="apidocSignatureSpan">electron-compile.digest_for_object.</span>default
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createDigestForObject(obj) {
+  let sha1 = _crypto2.default.createHash('sha1');
+  updateDigestForJsonValue(sha1, obj);
+
+  return sha1.digest('hex');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.file_change_cache" id="apidoc.module.electron-compile.file_change_cache">module electron-compile.file_change_cache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.file_change_cache.default" id="apidoc.element.electron-compile.file_change_cache.default">
+        function <span class="apidocSignatureSpan">electron-compile.file_change_cache.</span>default
+        <span class="apidocSignatureSpan">(appRoot)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class FileChangedCache {
+  constructor(appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 1 &amp;&amp; arguments[1] !== undefined ? arguments[1] : false;
+
+    this.appRoot = (0, _sanitizePaths2.default)(appRoot);
+
+    this.failOnCacheMiss = failOnCacheMiss;
+    this.changeCache = {};
+  }
+
+  static removePrefix(needle, haystack) {
+    let idx = haystack.toLowerCase().indexOf(needle.toLowerCase());
+    if (idx &lt; 0) return haystack;
+
+    return haystack.substring(idx + needle.length);
+  }
+
+<span class="apidocCodeCommentSpan">  /**
+   * Allows you to create a FileChangedCache from serialized data saved from
+   * {@link getSavedData}.
+   *
+   * @param  {Object} data  Saved data from getSavedData.
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {boolean} failOnCacheMiss (optional)  If True, cache misses will throw.
+   *
+   * @return {FileChangedCache}
+   */
+</span>  static loadFromData(data, appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : true;
+
+    let ret = new FileChangedCache(appRoot, failOnCacheMiss);
+    ret.changeCache = data.changeCache;
+    ret.originalAppRoot = data.appRoot;
+
+    return ret;
+  }
+
+  /**
+   * Allows you to create a FileChangedCache from serialized data saved from
+   * {@link save}.
+   *
+   * @param  {string} file  Saved data from save.
+   *
+   * @param  {string} appRoot  The top-level directory for your application (i.e.
+   *                           the one which has your package.json).
+   *
+   * @param  {boolean} failOnCacheMiss (optional)  If True, cache misses will throw.
+   *
+   * @return {Promise&lt;FileChangedCache&gt;}
+   */
+  static loadFromFile(file, appRoot) {
+    let failOnCacheMiss = arguments.length &gt; 2 &amp;&amp; arguments[2] !== undefined ? arguments[2] : true;
+    return _asyncToGenerator(function* () {
+      d(`Loading canned FileChangedCache from ${file}`);
+
+      let buf = yield _promise.pfs.readFile(file);
+      return FileChangedCache.loadFromData(JSON.parse((yield _promise.pzlib.gunzip(buf))), appRoot, failOnCacheMiss);
+    })();
+  }
+
+  /**
+   * Returns information about a given file, including its hash. This method is
+   * the main method for this cache.
+   *
+   * @param  {string} absoluteFilePath  The path to a file to retrieve info on.
+   *
+   * @return {Promise&lt;Object&gt;}
+   *
+   * @property {string} hash  The SHA1 hash of the file
+   * @property {boolean} isMinified  True if the file is minified
+   * @property {boolean} isInNodeModules  True if the file is in a library directory
+   * @property {boolean} hasSourceMap  True if the file has a source map
+   * @property {boolean} isFileBinary  True if the file is not a text file
+   * @property {Buffer} binaryData (optional)  The buffer that was read if the file
+   *                                           was binary and there was a cache miss.
+   * @property {string} code (optional)  The string that was read if the file
+   *                                     was text and there was a cache miss
+   */
+  getHashForPath(absoluteFilePath) {
+    var _this = this;
+
+    return _asyncToGenerator(function* () {
+      var _getCacheEntryForPath = _this.getCacheEntryForPath(absoluteFilePath);
+
+      let cacheEntry = _getCacheEntryForPath.cacheEntry,
+          cacheKey = _getCacheEntryForPath.cacheKey;
+
+
+      if (_this.failOnCacheMiss) {
+        return cacheEntry.info;
+      }
+
+      var _ref = yield _this.getInfoForCacheEntry(absoluteFilePath);
+
+      let ctime = _ref.ctime,
+          size = _ref.size;
+
+
+      if (cacheEntry) {
+        let fileHasChanged = yield _this.hasFileChanged(absoluteFilePath, cacheEntry, { ctime, size });
+
+        if (!fileHasChanged) {
+          return cacheEntry.info;
+        }
+
+        d(`Invalidating cache entry: ${cacheEntry.ctime} === ${ctime} &amp;&amp; ${cacheEntry.size} === ${size}`);
+        delete _this.changeCache.cacheEntry;
+      }
+
+      var _ref2 = yield _this.calculateHashForFile(absoluteFilePath);
+
+      let digest = _ref2.digest,
+          sourceCode = _ref2.sourceCode,
+          bi ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.for_all_files" id="apidoc.module.electron-compile.for_all_files">module electron-compile.for_all_files</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.for_all_files.forAllFiles" id="apidoc.element.electron-compile.for_all_files.forAllFiles">
+        function <span class="apidocSignatureSpan">electron-compile.for_all_files.</span>forAllFiles
+        <span class="apidocSignatureSpan">(rootDirectory, func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forAllFiles(rootDirectory, func) {
+  for (var _len = arguments.length, args = Array(_len &gt; 2 ? _len - 2 : 0), _key = 2; _key &lt; _len; _key++) {
+    args[_key - 2] = arguments[_key];
+  }
+
+  let rec = (() =&gt; {
+    var _ref = _asyncToGenerator(function* (dir) {
+      let entries = yield _promise.pfs.readdir(dir);
+
+      for (let name of entries) {
+        let fullName = _path2.default.join(dir, name);
+        let stats = yield _promise.pfs.stat(fullName);
+
+        if (stats.isDirectory()) {
+          yield rec(fullName);
+        }
+
+        if (stats.isFile()) {
+          yield func(fullName, ...args);
+        }
+      }
+    });
+
+    return function rec(_x) {
+      return _ref.apply(this, arguments);
+    };
+  })();
+
+  return rec(rootDirectory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.for_all_files.forAllFilesSync" id="apidoc.element.electron-compile.for_all_files.forAllFilesSync">
+        function <span class="apidocSignatureSpan">electron-compile.for_all_files.</span>forAllFilesSync
+        <span class="apidocSignatureSpan">(rootDirectory, func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function forAllFilesSync(rootDirectory, func) {
+  for (var _len2 = arguments.length, args = Array(_len2 &gt; 2 ? _len2 - 2 : 0), _key2 = 2; _key2 &lt; _len2; _key2++) {
+    args[_key2 - 2] = arguments[_key2];
+  }
+
+  let rec = dir =&gt; {
+    _fs2.default.readdirSync(dir).forEach(name =&gt; {
+      let fullName = _path2.default.join(dir, name);
+      let stats = _fs2.default.statSync(fullName);
+
+      if (stats.isDirectory()) {
+        rec(fullName);
+        return;
+      }
+
+      if (stats.isFile()) {
+        func(fullName, ...args);
+        return;
+      }
+    });
+  };
+
+  rec(rootDirectory);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.initialize_renderer" id="apidoc.module.electron-compile.initialize_renderer">module electron-compile.initialize_renderer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.initialize_renderer.initializeRendererProcess" id="apidoc.element.electron-compile.initialize_renderer.initializeRendererProcess">
+        function <span class="apidocSignatureSpan">electron-compile.initialize_renderer.</span>initializeRendererProcess
+        <span class="apidocSignatureSpan">(readOnlyMode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initializeRendererProcess(readOnlyMode) {
+  if (rendererInitialized) return;
+
+  let rootCacheDir = require('electron').remote.getGlobal(magicGlobalForRootCacheDir);
+  let appRoot = require('electron').remote.getGlobal(magicGlobalForAppRootDir);
+  let compilerHost = null;
+
+  // NB: This has to be synchronous because we need to block HTML parsing
+  // until we're set up
+  if (readOnlyMode) {
+    d(`Setting up electron-compile in precompiled mode with cache dir: ${rootCacheDir}`);
+
+    // NB: React cares SUPER HARD about this, and this is the earliest place
+    // we can set it up to ensure React picks it up correctly
+    process.env.NODE_ENV = 'production';
+    compilerHost = _compilerHost2.default.createReadonlyFromConfigurationSync(rootCacheDir, appRoot);
+  } else {
+    d(`Setting up electron-compile in development mode with cache dir: ${rootCacheDir}`);
+
+    var _require = require('./config-parser');
+
+    const createCompilers = _require.createCompilers;
+
+    const compilersByMimeType = createCompilers();
+
+    compilerHost = _compilerHost2.default.createFromConfigurationSync(rootCacheDir, appRoot, compilersByMimeType);
+  }
+
+  require('./x-require');
+  require('./require-hook').default(compilerHost);
+  rendererInitialized = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+function initializeProtocolHook(compilerHost) {
+  protocol = protocol || require('electron').protocol;
+
+  global[magicGlobalForRootCacheDir] = compilerHost.rootCacheDir;
+  global[magicGlobalForAppRootDir] = compilerHost.appRoot;
+
+  const electronCompileSetupCode = `if (window.require) require('electron-compile/lib/initialize-renderer').<span class="apidocCodeKeywordSpan">initializeRendererProcess</span>(${compilerHost.readOnlyMode});`;
+
+  protocol.interceptBufferProtocol('file', (() =&gt; {
+    var _ref = _asyncToGenerator(function* (request, finish) {
+let uri = _url2.default.parse(request.url);
+
+d(`Intercepting url ${request.url}`);
+if (request.url.indexOf(magicWords) &gt; -1) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.live_reload" id="apidoc.module.electron-compile.live_reload">module electron-compile.live_reload</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.live_reload.enableLiveReload" id="apidoc.element.electron-compile.live_reload.enableLiveReload">
+        function <span class="apidocSignatureSpan">electron-compile.live_reload.</span>enableLiveReload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enableLiveReload() {
+  let options = arguments.length &gt; 0 &amp;&amp; arguments[0] !== undefined ? arguments[0] : {};
+  let strategy = options.strategy;
+
+
+  if (process.type !== 'browser' || !global.globalCompilerHost) throw new Error("Call this from the browser process, right after
+ initializing electron-compile");
+
+  switch (strategy) {
+    case 'react-hmr':
+      enableReactHMR();
+      break;
+    case 'naive':
+    default:
+      enableLiveReloadNaive();
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.packager_cli" id="apidoc.module.electron-compile.packager_cli">module electron-compile.packager_cli</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.findExecutableOrGuess" id="apidoc.element.electron-compile.packager_cli.findExecutableOrGuess">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>findExecutableOrGuess
+        <span class="apidocSignatureSpan">(cmdToFind, argsToUse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function findExecutableOrGuess(cmdToFind, argsToUse) {
+  var _findActualExecutable = (0, _spawnRx.findActualExecutable)(cmdToFind, argsToUse);
+
+  let cmd = _findActualExecutable.cmd,
+      args = _findActualExecutable.args;
+
+  if (cmd === electronPackager) {
+    d(`Can't find ${cmdToFind}, falling back to where it should be as a guess!`);
+    let cmdSuffix = process.platform === 'win32' ? '.cmd' : '';
+    return (0, _spawnRx.findActualExecutable)(_path2.default.resolve(__dirname, '..', '..', '.bin', `${cmdToFind}${cmdSuffix}`),
+argsToUse);
+  }
+
+  return { cmd, args };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.packageDirToResourcesDir" id="apidoc.element.electron-compile.packager_cli.packageDirToResourcesDir">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>packageDirToResourcesDir
+        <span class="apidocSignatureSpan">(_x)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function packageDirToResourcesDir(_x) {
+  return _ref.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.packagerMain" id="apidoc.element.electron-compile.packager_cli.packagerMain">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>packagerMain
+        <span class="apidocSignatureSpan">(_x7)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function packagerMain(_x7) {
+  return _ref5.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.parsePackagerOutput" id="apidoc.element.electron-compile.packager_cli.parsePackagerOutput">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>parsePackagerOutput
+        <span class="apidocSignatureSpan">(output)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parsePackagerOutput(output) {
+  // NB: Yes, this is fragile as fuck. :-/
+  console.log(output);
+  let lines = output.split('\n');
+
+  let idx = lines.findIndex(x =&gt; x.match(/Wrote new app/i));
+  if (idx &lt; 1) throw new Error(`Packager output is invalid: ${output}`);
+  lines = lines.splice(idx);
+
+  // Multi-platform case
+  if (lines[0].match(/Wrote new apps/)) {
+    return lines.splice(1).filter(x =&gt; x.length &gt; 1);
+  } else {
+    return [lines[0].replace(/^.*new app to /, '')];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.runAsarArchive" id="apidoc.element.electron-compile.packager_cli.runAsarArchive">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>runAsarArchive
+        <span class="apidocSignatureSpan">(_x5, _x6)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function runAsarArchive(_x5, _x6) {
+  return _ref4.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.packager_cli.splitOutAsarArguments" id="apidoc.element.electron-compile.packager_cli.splitOutAsarArguments">
+        function <span class="apidocSignatureSpan">electron-compile.packager_cli.</span>splitOutAsarArguments
+        <span class="apidocSignatureSpan">(argv)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function splitOutAsarArguments(argv) {
+  if (argv.find(x =&gt; x.match(/^--asar-unpack$/))) {
+    throw new Error("electron-compile doesn't support --asar-unpack at the moment, use asar-unpack-dir");
+  }
+
+  // Strip --asar altogether
+  let ret = argv.filter(x =&gt; !x.match(/^--asar/));
+
+  if (ret.length === argv.length) {
+    return { packagerArgs: ret, asarArgs: null };
+  }
+
+  let indexOfUnpack = ret.findIndex(x =&gt; x.match(/^--asar-unpack-dir$/));
+  if (indexOfUnpack &lt; 0) {
+    return { packagerArgs: ret, asarArgs: [] };
+  }
+
+  let unpackArgs = ret.slice(indexOfUnpack, indexOfUnpack + 1);
+  let notUnpackArgs = ret.slice(0, indexOfUnpack).concat(ret.slice(indexOfUnpack + 2));
+
+  return { packagerArgs: notUnpackArgs, asarArgs: unpackArgs };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.pathwatcher_rx" id="apidoc.module.electron-compile.pathwatcher_rx">module electron-compile.pathwatcher_rx</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.pathwatcher_rx.watchPath" id="apidoc.element.electron-compile.pathwatcher_rx.watchPath">
+        function <span class="apidocSignatureSpan">electron-compile.pathwatcher_rx.</span>watchPath
+        <span class="apidocSignatureSpan">(directory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watchPath(directory) {
+  let ret = pathCache.get(directory);
+  if (ret) return ret;
+
+  ret = watchPathDirect(directory).publish().refCount();
+  pathCache.set(directory, ret);
+  return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.pathwatcher_rx.watchPathDirect" id="apidoc.element.electron-compile.pathwatcher_rx.watchPathDirect">
+        function <span class="apidocSignatureSpan">electron-compile.pathwatcher_rx.</span>watchPathDirect
+        <span class="apidocSignatureSpan">(directory)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watchPathDirect(directory) {
+  return _Observable.Observable.create(subj =&gt; {
+    let dead = false;
+
+    const watcher = _fs2.default.watch(directory, {}, (eventType, fileName) =&gt; {
+      if (dead) return;
+      subj.next({ eventType, fileName });
+    });
+
+    watcher.on('error', e =&gt; {
+      dead = true;
+      subj.error(e);
+    });
+
+    return new _Subscription.Subscription(() =&gt; {
+      if (!dead) {
+        watcher.close();
+      }
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.protocol_hook" id="apidoc.module.electron-compile.protocol_hook">module electron-compile.protocol_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.protocol_hook.addBypassChecker" id="apidoc.element.electron-compile.protocol_hook.addBypassChecker">
+        function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>addBypassChecker
+        <span class="apidocSignatureSpan">(bypassChecker)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addBypassChecker(bypassChecker) {
+  bypassCheckers.push(bypassChecker);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.protocol_hook.initializeProtocolHook" id="apidoc.element.electron-compile.protocol_hook.initializeProtocolHook">
+        function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>initializeProtocolHook
+        <span class="apidocSignatureSpan">(compilerHost)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initializeProtocolHook(compilerHost) {
+  protocol = protocol || require('electron').protocol;
+
+  global[magicGlobalForRootCacheDir] = compilerHost.rootCacheDir;
+  global[magicGlobalForAppRootDir] = compilerHost.appRoot;
+
+  const electronCompileSetupCode = `if (window.require) require('electron-compile/lib/initialize-renderer').initializeRendererProcess
+(${compilerHost.readOnlyMode});`;
+
+  protocol.interceptBufferProtocol('file', (() =&gt; {
+    var _ref = _asyncToGenerator(function* (request, finish) {
+      let uri = _url2.default.parse(request.url);
+
+      d(`Intercepting url ${request.url}`);
+      if (request.url.indexOf(magicWords) &gt; -1) {
+        finish({
+          mimeType: 'application/javascript',
+          data: new Buffer(electronCompileSetupCode, 'utf8')
+        });
+
+        return;
+      }
+
+      // This is a protocol-relative URL that has gone pear-shaped in Electron,
+      // let's rewrite it
+      if (uri.host &amp;&amp; uri.host.length &gt; 1) {
+        //let newUri = request.url.replace(/^file:/, "https:");
+        // TODO: Jump off this bridge later
+        d(`TODO: Found bogus protocol-relative URL, can't fix it up!!`);
+        finish(-2);
+        return;
+      }
+
+      let filePath = decodeURIComponent(uri.pathname);
+
+      // NB: pathname has a leading '/' on Win32 for some reason
+      if (process.platform === 'win32') {
+        filePath = filePath.slice(1);
+      }
+
+      // NB: Special-case files coming from atom.asar or node_modules
+      if (filePath.match(/[\/\\](atom|electron).asar/) || filePath.match(/[\/\\](node_modules|bower_components)/)) {
+        // NBs on NBs: If we're loading an HTML file from node_modules, we still have
+        // to do the HTML document rigging
+        if (filePath.match(/\.html?$/i)) {
+          let riggedContents = null;
+          _fs2.default.readFile(filePath, 'utf8', function (err, contents) {
+            if (err) {
+              if (err.errno === 34) {
+                finish(-6); // net::ERR_FILE_NOT_FOUND
+                return;
+              } else {
+                finish(-2); // net::FAILED
+                return;
+              }
+            }
+
+            riggedContents = rigHtmlDocumentToInitializeElectronCompile(contents);
+            finish({ data: new Buffer(riggedContents), mimeType: 'text/html' });
+            return;
+          });
+
+          return;
+        }
+
+        requestFileJob(filePath, finish);
+        return;
+      }
+
+      // NB: Chromium will somehow decide that external source map references
+      // aren't relative to the file that was loaded for node.js modules, but
+      // relative to the HTML file. Since we can't really figure out what the
+      // real path is, we just need to squelch it.
+      if (filePath.match(/\.map$/i) &amp;&amp; !(yield doesMapFileExist(filePath))) {
+        finish({ data: new Buffer("", 'utf8'), mimeType: 'text/plain' });
+        return;
+      }
+
+      for (const bypassChecker of bypassCheckers) {
+        if (bypassChecker(filePath)) {
+          d('bypassing compilers for:', filePath);
+          requestFileJob(filePath, finish);
+          return;
+        }
+      }
+
+      try {
+        let result = yield compilerHost.compile(filePath);
+
+        if (result.mimeType === 'text/html') {
+          result.code = rigHtmlDocumentToInitializeElectronCompile(result.code);
+        }
+
+        if (result.binaryData || result.code instanceof Buffer) {
+          finish({ data: result.binaryData || result.code, mimeType: result.mimeType });
+          return;
+        } else {
+          finish({ data: new Buffer(result.code), mimeType: result.mimeType });
+          return;
+        }
+      } catch (e) {
+        let err = `Failed to compile ${filePath}: ${e.message}\n${e.stack}`;
+        d(err);
+
+        if (e.errno === 34 /*ENOENT*/) {
+            finish(-6); // net::ERR_FILE_NOT_FOUND
+            return;
+          }
+
+        finish({ mimeType: 'text/plain', data: new Buffer(err) });
+        return;
+      }
+    });
+
+    return function (_x, _x2) {
+      return _ref.apply(this, arguments);
+    };
+  })());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.protocol_hook.rigHtmlDocumentToInitializeElectronCompile" id="apidoc.element.electron-compile.protocol_hook.rigHtmlDocumentToInitializeElectronCompile">
+        function <span class="apidocSignatureSpan">electron-compile.protocol_hook.</span>rigHtmlDocumentToInitializeElectronCompile
+        <span class="apidocSignatureSpan">(doc)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rigHtmlDocumentToInitializeElectronCompile(doc) {
+  let lines = doc.split("\n");
+  let replacement = `&lt;head&gt;&lt;script src="${magicWords}"&gt;&lt;/script&gt;`;
+  let replacedHead = false;
+
+  for (let i = 0; i &lt; lines.length; i++) {
+    if (!lines[i].match(/&lt;head&gt;/i)) continue;
+
+    lines[i] = lines[i].replace(/&lt;head&gt;/i, replacement);
+    replacedHead = true;
+    break;
+  }
+
+  if (!replacedHead) {
+    replacement = `&lt;html$1&gt;&lt;head&gt;&lt;script src="${magicWords}"&gt;&lt;/script&gt;&lt;/head&gt;`;
+    for (let i = 0; i &lt; lines.length; i++) {
+      if (!lines[i].match(/&lt;html/i)) continue;
+
+      lines[i] = lines[i].replace(/&lt;html([^&gt;]+)&gt;/i, replacement);
+      break;
+    }
+  }
+
+  return lines.join("\n");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.read_only_compiler" id="apidoc.module.electron-compile.read_only_compiler">module electron-compile.read_only_compiler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.read_only_compiler.default" id="apidoc.element.electron-compile.read_only_compiler.default">
+        function <span class="apidocSignatureSpan">electron-compile.read_only_compiler.</span>default
+        <span class="apidocSignatureSpan">(name, compilerVersion, compilerOptions, inputMimeTypes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">class ReadOnlyCompiler {
+<span class="apidocCodeCommentSpan">  /**
+   * Creates a ReadOnlyCompiler instance
+   *
+   * @private
+   */
+</span>  constructor(name, compilerVersion, compilerOptions, inputMimeTypes) {
+    Object.assign(this, { name, compilerVersion, compilerOptions, inputMimeTypes });
+  }
+
+  shouldCompileFile() {
+    return _asyncToGenerator(function* () {
+      return true;
+    })();
+  }
+  determineDependentFiles() {
+    return _asyncToGenerator(function* () {
+      return [];
+    })();
+  }
+
+  compile() {
+    return _asyncToGenerator(function* () {
+      throw new Error("Read-only compilers can't compile");
+    })();
+  }
+
+  shouldCompileFileSync() {
+    return true;
+  }
+  determineDependentFilesSync() {
+    return [];
+  }
+
+  compileSync() {
+    throw new Error("Read-only compilers can't compile");
+  }
+
+  getCompilerVersion() {
+    return this.compilerVersion;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.require_hook" id="apidoc.module.electron-compile.require_hook">module electron-compile.require_hook</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.require_hook.default" id="apidoc.element.electron-compile.require_hook.default">
+        function <span class="apidocSignatureSpan">electron-compile.require_hook.</span>default
+        <span class="apidocSignatureSpan">(compilerHost)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerRequireExtension(compilerHost) {
+  if (HMR) {
+    try {
+      require('module').prototype.hot = {
+        accept: cb =&gt; window.__hot.push(cb)
+      };
+
+      require.main.require('react-hot-loader/patch');
+    } catch (e) {
+      console.error(`Couldn't require react-hot-loader/patch, you need to add react-hot-loader@3 as a dependency! ${e.message}`);
+    }
+  }
+
+  Object.keys(compilerHost.compilersByMimeType).forEach(mimeType =&gt; {
+    let ext = _mimeTypes2.default.extension(mimeType);
+
+    require.extensions[`.${ext}`] = (module, filename) =&gt; {
+      var _compilerHost$compile = compilerHost.compileSync(filename);
+
+      let code = _compilerHost$compile.code;
+
+
+      if (code === null) {
+        console.error(`null code returned for "${filename}".  Please raise an issue on 'electron-compile' with the contents of this
+ file.`);
+      }
+
+      module._compile(code, filename);
+    };
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.rig_mime_types" id="apidoc.module.electron-compile.rig_mime_types">module electron-compile.rig_mime_types</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.rig_mime_types.init" id="apidoc.element.electron-compile.rig_mime_types.init">
+        function <span class="apidocSignatureSpan">electron-compile.rig_mime_types.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function init() {
+  Object.keys(typesToRig).forEach(type =&gt; {
+    let ext = typesToRig[type];
+
+    _mimeTypes2.default.types[ext] = type;
+    _mimeTypes2.default.extensions[type] = [ext];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create a new file that will be the entry point of your app (perhaps changing 'main' in package.json) - you need to pass
+ in the root directory of your application, which will vary based on your setup. The root directory is the directory that your `
+package.json` is in.
+
+```js
+// Assuming this file is ./src/es6-init.js
+var appRoot = path.join(__dirname, '..');
+
+require('electron-compile').<span class="apidocCodeKeywordSpan">init</span>(appRoot, require.resolve('./main'
+;));
+```
+
+
+### I did it, now what?
+
+From then on, you can now simply include files directly in your HTML, no need for cross-compilation:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electron-compile.sanitize_paths" id="apidoc.module.electron-compile.sanitize_paths">module electron-compile.sanitize_paths</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electron-compile.sanitize_paths.default" id="apidoc.element.electron-compile.sanitize_paths.default">
+        function <span class="apidocSignatureSpan">electron-compile.sanitize_paths.</span>default
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function sanitizeFilePath(file) {
+  if (!file) return file;
+
+  // NB: Some people add symlinks into system directories. node.js will internally
+  // call realpath on paths that it finds, which will break our cache resolution.
+  // We need to catch this scenario and fix it up. The tricky part is, some parts
+  // of Electron will give us the pre-resolved paths, and others will give us the
+  // post-resolved one. We need to handle both.
+
+  let realFile = null;
+  let parts = file.split(/[\\\/]app.asar[\\\/]/);
+  if (!parts[1]) {
+    // Not using an ASAR archive
+    realFile = cachedRealpath(file);
+  } else {
+    // We do all this silliness to work around
+    // https://github.com/atom/electron/issues/4610
+    realFile = `${cachedRealpath(parts[0])}/app.asar/${parts[1]}`;
+  }
+
+  return realFile.replace(/[\\\/]/g, '/');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.on('uncaughtException', e =&gt; {
+d(e.message || e);
+d(e.stack || '');
+});
+
+const d = require('debug')('electron-compile');
+
+const yargs = require('yargs').usage('Usage: electron-compile --appdir [root-app-dir] paths...').alias('
+;a', 'appdir').describe('a', 'The top-level application directory (i.e. where your package.json is
+)').<span class="apidocCodeKeywordSpan">default</span>('a', process.cwd()).alias('c', 'cachedir'
+;).describe('c', 'The directory to put the cache').alias('s', 'sourcemapdir').describe(&amp;#
+x27;s', 'The directory to store sourcemap if compiler configured to have sourcemap file. Default to cachedir if not specified
+.').help('h').alias('h', 'help').epilog('Copyright 2015');
+
+if (process.mainModule === module) {
+const argv = yargs.argv;
+
+if (!argv._ || argv._.length &lt; 1) {
+  yargs.showHelp();
+  process.exit(-1);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
