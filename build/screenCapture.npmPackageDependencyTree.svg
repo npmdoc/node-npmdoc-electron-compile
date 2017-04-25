@@ -9,8 +9,8 @@
 <tspan x="10" y="106">  │ └── @paulcbetts/mime-db@1.22.4 </tspan>
 <tspan x="10" y="122">  ├── @types/node@7.0.13 </tspan>
 <tspan x="10" y="138">  ├── btoa@1.1.2 </tspan>
-<tspan x="10" y="154">  ├─┬ debug@2.6.3 </tspan>
-<tspan x="10" y="170">  │ └── ms@0.7.2 </tspan>
+<tspan x="10" y="154">  ├─┬ debug@2.6.4 </tspan>
+<tspan x="10" y="170">  │ └── ms@0.7.3 </tspan>
 <tspan x="10" y="186">  ├─┬ lru-cache@4.0.2 </tspan>
 <tspan x="10" y="202">  │ ├── pseudomap@1.0.2 </tspan>
 <tspan x="10" y="218">  │ └── yallist@2.1.2 </tspan>
@@ -56,7 +56,7 @@
 <tspan x="10" y="858">    │   │ │   └── is-arrayish@0.2.1 </tspan>
 <tspan x="10" y="874">    │   │ └─┬ strip-bom@2.0.0 </tspan>
 <tspan x="10" y="890">    │   │   └── is-utf8@0.2.1 </tspan>
-<tspan x="10" y="906">    │   ├─┬ normalize-package-data@2.3.6 </tspan>
+<tspan x="10" y="906">    │   ├─┬ normalize-package-data@2.3.8 </tspan>
 <tspan x="10" y="922">    │   │ ├── hosted-git-info@2.4.2 </tspan>
 <tspan x="10" y="938">    │   │ ├─┬ is-builtin-module@1.0.0 </tspan>
 <tspan x="10" y="954">    │   │ │ └── builtin-modules@1.1.1 </tspan>
