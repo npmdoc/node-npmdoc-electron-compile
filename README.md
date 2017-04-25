@@ -1,6 +1,6 @@
 # npmdoc-electron-compile
 
-#### api documentation for  [electron-compile (v6.4.0)](https://github.com/paulcbetts/electron-compile)  [![npm package](https://img.shields.io/npm/v/npmdoc-electron-compile.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-electron-compile) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-electron-compile.svg)](https://travis-ci.org/npmdoc/node-npmdoc-electron-compile)
+#### basic api documentation for  [electron-compile (v6.4.0)](https://github.com/paulcbetts/electron-compile)  [![npm package](https://img.shields.io/npm/v/npmdoc-electron-compile.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-electron-compile) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-electron-compile.svg)](https://travis-ci.org/npmdoc/node-npmdoc-electron-compile)
 
 #### Electron supporting package to compile JS and CSS in Electron applications
 
@@ -21,38 +21,15 @@
 ```json
 
 {
-    "name": "electron-compile",
-    "version": "6.4.0",
-    "description": "Electron supporting package to compile JS and CSS in Electron applications",
-    "scripts": {
-        "doc": "esdoc -c ./esdoc.json",
-        "compile": "cross-env NODE_ENV='production' git clean -xdf lib && babel -d lib/ src",
-        "prepublish": "npm run compile",
-        "start": "npm run compile && electron ./test-dist/electron-smoke-test.js",
-        "test": "mocha --compilers js:babel-register test/*.js",
-        "test-cov": "cross-env NODE_ENV='test' istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-register test/*.js"
+    "author": {
+        "name": "Paul Betts"
     },
     "bin": {
         "electron-compile": "lib/cli.js",
         "electron-packager-compile": "lib/packager-cli.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/paulcbetts/electron-compile"
-    },
-    "keywords": [
-        "electron"
-    ],
-    "author": "Paul Betts <paul@paulbetts.org>",
-    "license": "MIT",
     "bugs": {
         "url": "https://github.com/paulcbetts/electron-compile/issues"
-    },
-    "homepage": "https://github.com/paulcbetts/electron-compile",
-    "main": "lib/index.js",
-    "types": "types/index.d.ts",
-    "engines": {
-        "node": ">= 5.0"
     },
     "dependencies": {
         "@paulcbetts/mime-types": "^2.1.10",
@@ -67,6 +44,7 @@
         "spawn-rx": "^2.0.3",
         "yargs": "^4.8.1"
     },
+    "description": "Electron supporting package to compile JS and CSS in Electron applications",
     "devDependencies": {
         "asar": "^0.12.1",
         "babel-cli": "^6.11.4",
@@ -90,7 +68,43 @@
         "eslint": "^3.3.0",
         "istanbul": "^0.4.5",
         "mocha": "^3.0.2"
-    }
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "c2670d8b512f41613ed37dea7a8b22548ca754ae",
+        "tarball": "https://registry.npmjs.org/electron-compile/-/electron-compile-6.4.0.tgz"
+    },
+    "engines": {
+        "node": ">= 5.0"
+    },
+    "gitHead": "7dffa22995c83a2def8f164d5ef486f46f57cc1a",
+    "homepage": "https://github.com/paulcbetts/electron-compile",
+    "keywords": [
+        "electron"
+    ],
+    "license": "MIT",
+    "main": "lib/index.js",
+    "maintainers": [
+        {
+            "name": "paulcbetts"
+        }
+    ],
+    "name": "electron-compile",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/paulcbetts/electron-compile.git"
+    },
+    "scripts": {
+        "compile": "cross-env NODE_ENV='production' git clean -xdf lib && babel -d lib/ src",
+        "doc": "esdoc -c ./esdoc.json",
+        "prepublish": "npm run compile",
+        "start": "npm run compile && electron ./test-dist/electron-smoke-test.js",
+        "test": "mocha --compilers js:babel-register test/*.js",
+        "test-cov": "cross-env NODE_ENV='test' istanbul cover ./node_modules/mocha/bin/_mocha -- --compilers js:babel-register test/*.js"
+    },
+    "types": "types/index.d.ts",
+    "version": "6.4.0"
 }
 ```
 
